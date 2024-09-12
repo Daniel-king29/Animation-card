@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content{
+    position: relative;
+}
+
+.card{
+    text-align: center;
+    width: 30%;
+    background:radial-gradient(rgb(193, 208, 228), rgb(160, 12, 12),rgb(29, 28, 28));
+    padding: 20px;
+}
+
+.card:hover .content-title{
+    display: block;
+}
+
+.container img{
+    border-radius: 20px;
+}
+
+.card:hover img{
+    transform: translateY(-100px);
+    transition: all 2s ease-in-out;
+}
+
+.content-title{
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    animation-name: slow-mo;
+    animation-duration: 2.5s;
+    animation-delay: 1.3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes slow-mo{
+    100%{transform: rotateX(0);}
+    0%{transform: rotateX(90deg);}
+
+}
+
+.content-title{
+    color: rgb(253, 47, 47);
+}
+
+.content a{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    color: aqua;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.content-title h2{
+    color: crimson;
+}
+
+.container a:hover{
+    opacity: 0.8;
+    background-color: black;
+    color: aqua;
+}
+
+
+.card:hover a{
+    transform: translateY(40px);
+    background-color: purple;
+    color: white;
+    transition: all 2s ease-in-out;
+}
